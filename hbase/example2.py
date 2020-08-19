@@ -1,6 +1,7 @@
 import happybase
 
 connection = happybase.Connection('hostname')
+connection.create_table('table-name', {'family': dict()})
 table = connection.table('table-name')
 
 table.put(b'row-key', {b'family:qual1': b'value1',

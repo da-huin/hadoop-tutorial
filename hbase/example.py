@@ -4,6 +4,7 @@ connection = happybase.Connection('localhost', 9090)
 connection.create_table('table-name', {'family': dict()})
 connection.tables()
 table = connection.table('table-name')
-table.put('row-key', {'hello':'world', 'yellow': 'banana'})
+table.put('row-key', {'family:qual1': 'value1', 'family:qual2': 'value2'})
 for k, data in table.scan():
     print(k, data)
+
