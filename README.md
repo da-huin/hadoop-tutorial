@@ -70,7 +70,9 @@ This document explains how to install Hadoop and Hbase and how to basic use it.
     1. Create file `Dockerfile`
 
     1. Copy and Paste code below to `Dockerfile`
-    
+
+        * Dockerfile is the place to write the properties of the OS.
+
         ```Dockerfile
         FROM ubuntu:20.04
 
@@ -91,13 +93,15 @@ This document explains how to install Hadoop and Hbase and how to basic use it.
         CMD jupyter lab --ip=0.0.0.0 --port=8888 --allow-root
         ```
 
-    1. build docker
+    1. Build Dockerfile.
 
         ```
         docker build --tag jupyter .
         ```
 
-    1. run jupyter notebook.
+    1. Run jupyter notebook.
+
+        * If you want check docker command, please see https://docs.docker.com/engine/reference/commandline/docker/.
 
         ```bash
         docker run -v $pwd/workspace:/workspace -p 8888:8888 -it --rm -d --name jupyter jupyter
