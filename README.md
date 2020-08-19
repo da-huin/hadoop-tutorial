@@ -130,8 +130,9 @@ This document explains how to install Hadoop and Hbase and how to basic use it.
 
 ### **Please follow the step below to know the basic usage.**
 
+1. **Run Docker hbase on your EC2 Computer**
 
-1. **Run Docker hbase on your Computer**
+    * If you want check docker command, please see https://docs.docker.com/engine/reference/commandline/docker/.
 
     ```bash
     mkdir -p data
@@ -151,7 +152,6 @@ This document explains how to install Hadoop and Hbase and how to basic use it.
     connection.create_table('sample', {'family': dict()})
     print(connection.tables())
     ```
-
 
 1. **Connect table and put data and read data**
 
@@ -174,7 +174,6 @@ This document explains how to install Hadoop and Hbase and how to basic use it.
 
     # Delete row.
     table.delete(b'sample-rowkey')
-
     ```
 
 1. **Run docker shell to check**
