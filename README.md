@@ -104,7 +104,7 @@ This document explains how to install Hadoop and Hbase and how to basic use it.
         * If you want check docker command, please see https://docs.docker.com/engine/reference/commandline/docker/.
 
         ```bash
-        docker run -v $pwd/workspace:/workspace -p 8888:8888 -it --rm -d --name jupyter jupyter
+        docker run -v $pwd/workspace:/workspace --network host -it --rm -d --name jupyter jupyter
 
         # if you run code below, you can get a token.
         docker logs -f jupyter
