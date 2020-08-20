@@ -141,7 +141,7 @@ This document explains how to install Hadoop and Hbase and how to basic use it.
     ```bash
     mkdir -p data
 
-    docker run -p 16010:16010 -p 9090:9090 -p 9095:9095 -p 8080:8080 -p 8085:8085 -p 2181:2181 --name=hbase-docker -h hbase-docker -d -v $pwd/data:/data dajobe/hbase
+    docker run -p 16010:16010 -p 9090:9090 -p 9095:9095 -p 8080:8080 -p 8085:8085 -p 2181:2181 --name=hbase-docker hbase-docker -d -v $pwd/data:/data dajobe/hbase
     ```
 
 1. **Connect hbase and create table.**
